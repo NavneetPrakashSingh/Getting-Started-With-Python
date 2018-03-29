@@ -4,15 +4,13 @@ Created on Thu Mar 29 11:14:16 2018
 
 @author: Navneet
 """
-from decimal import *
+
 #python string formatting | https://www.hackerrank.com/challenges/python-string-formatting/problem
-count = int(input())
-for i in range(1, count+1):
-    decimalValue =int(Decimal(i))
-    octaValue = oct(i)
-    hexadecimalValue = hex(i)
-    binaryValue = bin(i)
-    binaryLength = len(binaryValue)    
-   # print(decimalValue,"--",octaValue,"--",hexadecimalValue,"--",binaryValue)
-    print(decimalValue,ljust(binaryLength),octaValue,ljust(binaryLength),hexadecimalValue,ljust(binaryLength),binaryValue)
+string = 'navneet'
+#string.capitalize()
+
+for i in range(1, count+1):      
+    width = len("{0:b}".format(i))    
+    print("{0:d} {0:{width}o} {0:{width}X} {0:{width}b}".format(i,width=width))
+    #print(decimalValue,rjust(binaryLength),octaValue,ljust(binaryLength),hexadecimalValue,ljust(binaryLength),binaryValue)
     
